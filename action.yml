@@ -4,7 +4,7 @@ author: 'David Bour'
 inputs:
   pattern:
     required: true
-    description: "A RegEx pattern. Don't forget to escape when needed!"
+    description: "A RegEx pattern."
 runs:
   using: 'node12'
   main: 'dist/index.js'

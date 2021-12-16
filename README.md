@@ -18,5 +18,5 @@ jobs:
     steps:
       - uses: pragmatic-tools/pr-title-validator@v1.0
         with:
-          pattern: 'JIRA-\\d+.*'
+          pattern: JIRA-\d+.*
 ```

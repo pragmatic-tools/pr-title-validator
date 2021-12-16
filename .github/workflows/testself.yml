@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Validate PR Title
-        uses: pragmatic-tools/pr-title-validator@1.0.0
+        uses: ./
         with:
-          pattern: 'JIRA-\\d+.*'
+          pattern: JIRA-\d+.*

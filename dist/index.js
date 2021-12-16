@@ -39,12 +39,14 @@ const core = __importStar(__nccwpck_require__(2186));
 const github = __importStar(__nccwpck_require__(5438));
 const validator_1 = __nccwpck_require__(4618);
 function run() {
-    var _a;
+    var _a, _b, _c;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const input = core.getInput('pattern');
-            if (!(0, validator_1.isValidTitle)((_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.title, input)) {
-                throw new Error('Pull request title did not match the provided pattern.');
+            const prTitle = (_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.title;
+            console.log((_b = github.context.payload.pull_request) === null || _b === void 0 ? void 0 : _b.title);
+            if (!(0, validator_1.isValidTitle)((_c = github.context.payload.pull_request) === null || _c === void 0 ? void 0 : _c.title, input)) {
+                throw new Error(`Pull request title (${prTitle}) did not match the provided pattern (${input}).`);
             }
         }
         catch (error) {
@@ -66,6 +68,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isValidTitle = void 0;
 function isValidTitle(input, pattern) {
     const regexPat = new RegExp(pattern);
+    const result = input.search(regexPat);
+    console.log(`The input is: ${input}`);
+    console.log(`The pattern is: ${pattern}`);
+    console.log(`The result is: ${result}`);
     return input.search(regexPat) !== -1;
 }
 exports.isValidTitle = isValidTitle;
