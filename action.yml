@@ -1,11 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'PR Title Validator'
+description: 'Check your pull request titles'
+author: 'David Bour'
 inputs:
-  milliseconds: # change this
+  pattern:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: "A RegEx pattern. Don't forget to escape when needed!"
 runs:
   using: 'node12'
   main: 'dist/index.js'
