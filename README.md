@@ -6,7 +6,7 @@ Want to provide some standards on your project? The pull request validator is he
 
 Here's an example of where we want our pull request titles to have the prefix "JIRA-(some_number)" at minimum. (e.g. `JIRA-101 Fix Project Management`)
 
-```
+```javascript
 name: `Pull Request Title Validator`
 on:
   pull_request:
