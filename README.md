@@ -16,7 +16,7 @@ jobs:
   require-valid-pr-title:
     runs-on: ubuntu-latest
     steps:
-      - uses: pragmatic-tools/pr-title-validator@v1.0
+      - uses: pragmatic-tools/pr-title-validator@1.0.0
         with:
           pattern: 'JIRA-\d+.*'
 ```
